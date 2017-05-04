@@ -159,3 +159,7 @@ readGPTJs() {
 
 ![Screen Shot 2017-05-04 at 20.55.14](https://chiangkeith.github.io/dfp-demo/img/20.55.14.png)
 
+### 結語
+
+若要在 SPA 中，重新載入廣告使 creative id 結尾固定為 `_1`，需再了解廣告端程式與 Enabler.js 機制。
+
