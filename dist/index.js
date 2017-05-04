@@ -31,7 +31,7 @@ var DFPDemo = function () {
           delete window.adSLot['/40175602/test_pc_np_ap_970x250_HD'];
           console.log('do refresh', window.adSLot);
           _this.setUpAd();
-          _this.displayAd();
+          _this.refreshAd();
         });
         console.log('do refresh');
       });
@@ -104,6 +104,15 @@ var DFPDemo = function () {
       googletag.cmd.push(function () {
         console.log('show', window.adSLot['/40175602/test_pc_np_ap_970x250_HD'].adid);
         googletag.display(window.adSLot['/40175602/test_pc_np_ap_970x250_HD'].adid);
+      });
+    }
+  }, {
+    key: 'refreshAd',
+    value: function refreshAd() {
+      window.googletag = window.googletag || {};
+      window.googletag.cmd = window.googletag.cmd || [];
+      googletag.cmd.push(function () {
+        console.log('refresh', window.adSLot['/40175602/test_pc_np_ap_970x250_HD'].adid);
         googletag.pubads().refresh([window.adSLot['/40175602/test_pc_np_ap_970x250_HD']]);
       });
     }
