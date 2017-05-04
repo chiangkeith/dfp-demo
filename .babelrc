@@ -1,0 +1,11 @@
+{
+  "presets": [
+    "es2015",
+    // "babili",
+    // "env"
+  ],
+  "plugins": [
+    // "transform-runtime",
+    "transform-es2015-classes",
+  ]
+}
