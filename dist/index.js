@@ -16,6 +16,7 @@ var DFPDemo = function () {
     this.displayAd = this.displayAd.bind(this);
     this.removeDfp = this.removeDfp.bind(this);
     this.readGPTJs = this.readGPTJs.bind(this);
+    this.refreshAd = this.refreshAd.bind(this);
   }
 
   _createClass(DFPDemo, [{
