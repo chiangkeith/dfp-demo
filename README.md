@@ -58,13 +58,13 @@ displayAd() {
 }
 ```
 
-![Screen Shot 2017-05-04 at 18.46.16](https://chiangkeith.github.io/dfp-demo/img/Screen Shot 2017-05-04 at 18.46.16.png)
+![Screen Shot 2017-05-04 at 18.46.16](https://chiangkeith.github.io/dfp-demo/img/18.46.16.png)
 
 其中可見，廣告區域中已被寫入 `iframe` 與 `<div id="creative_xxxxxxx_1"></div>`，其中 creative id `creative_xxxxxxx_1` 猜測是由 **Enable.js** 註冊，其 id 最後的序號 `_1` 猜測是由 **Enable.js** 或由**寫入 creative div 的程式**自行編號。
 
 而本例將透過兩個方式重新取得廣告，並觀察 creative id 變化。
 
-![Screen Shot 2017-05-04 at 18.58.47](https://chiangkeith.github.io/dfp-demo/img/Screen Shot 2017-05-04 at 18.58.47.png)
+![Screen Shot 2017-05-04 at 18.58.47](https://chiangkeith.github.io/dfp-demo/img/18.58.47.png)
 
 
 
@@ -101,7 +101,7 @@ refreshAd() {
 
 可見，僅是透過 `googletag.destroySlots()` 並無法改變 creative id 被註冊的情況， creative id 無法固定為序號 `_1`。
 
-![Screen Shot 2017-05-04 at 19.06.14](https://chiangkeith.github.io/dfp-demo/img/Screen Shot 2017-05-04 at 19.06.14.png)
+![Screen Shot 2017-05-04 at 19.06.14](https://chiangkeith.github.io/dfp-demo/img/19.06.14.png)
 
 ### 3、點擊按鈕「another article(load gpt.js again)」重新取得廣告。
 
@@ -157,5 +157,5 @@ readGPTJs() {
 
 開始載入 `gpt.js` 後，會分別執行 `this.setUpAdBasic()` 、`this.setUpAd()` 與 `this.displayAd()` 將廣告秀出。讀出廣告後可見 creative id 為 `creative_xxxxxxx_3` ，結果證明：光是透過 `googletag.destroySlots()` 或 reload `gpt.js` 是無法重置每個已被依註冊過的 creative id。
 
-![Screen Shot 2017-05-04 at 20.55.14](https://chiangkeith.github.io/dfp-demo/img/Screen Shot 2017-05-04 at 20.55.14.png)
+![Screen Shot 2017-05-04 at 20.55.14](https://chiangkeith.github.io/dfp-demo/img/20.55.14.png)
 
